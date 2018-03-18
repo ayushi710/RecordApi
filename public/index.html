@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record Management</title>
+    <script src="scripts/angular.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+<div ng-app="record" ng-controller="recordCtrl">
+    <div class="main">
+        <h3>Records</h3>
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>Name</th>
+                    <th>D.O.B</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                </tr>
+                </thead>
+
+                <tbody ng-repeat="x in rec | orderBy : 'name' ">
+                <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.date_of_birth}}</td>
+                    <td>{{ x.email }}</td>
+                    <td>{{ x.contact }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>{{ $scope.rec }}</p>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src='scripts/index.js'></script>
+</html>

@@ -12,4 +12,4 @@ API which is used to maintain records
 
 # How to run
 1. Open brower
-2. Open http://localhost//3000
+2. Open http://localhost:3000
